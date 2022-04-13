@@ -52,11 +52,12 @@
                                 <form action="{{route('user.approve', $user->id)}}" method="post">
                                     @csrf
                                     @method('PATCH')
-                                    @if (auth()->user()->userHasRole('Admin'))
+                                    @if ($user->approved == 0)
                                         <button type="submit" class="btn btn-primary">Approve</button>
                                     @endif
                                 </form>
                                 @if (auth()->user()->userHasRole('Client'))
+                                        <a href="{{route('user.location', $user)}}"><button type="submit" class="btn btn-primary">Map Location</button></a>
                                         <a href="{{route('messages.create', $user)}}"><button type="submit" class="btn btn-primary">Message</button></a>
                                 @endif
                             <!--endcan-->

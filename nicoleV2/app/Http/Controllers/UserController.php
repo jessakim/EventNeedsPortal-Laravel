@@ -39,12 +39,12 @@ class UserController extends Controller
 
         Session::flash('userUpdated', 'User was updated successfully');
 
-        if ($user->userHasRole('admin')) {
+        /*if ($user->userHasRole('admin')) {
             return redirect()->route('users.index');
         }
-        else {
+        else {*/
             return back();
-        }
+        //}
     }
 
     public function remove(User $user){
