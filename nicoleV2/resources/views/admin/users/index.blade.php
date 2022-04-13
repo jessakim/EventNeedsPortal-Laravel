@@ -48,7 +48,6 @@
                                         <button type="submit" class="btn btn-danger">Delete</button>
                                     @endif
                                 </form>
-                                &nbsp;
                                 <form action="{{route('user.approve', $user->id)}}" method="post">
                                     @csrf
                                     @method('PATCH')

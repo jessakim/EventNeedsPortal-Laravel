@@ -1,4 +1,4 @@
-<!--if (auth()->user()->userHasRole('Admin'))-->
+@if (auth()->user()->approved == 1)
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fa fa-users" aria-hidden="true"></i>
@@ -26,5 +26,5 @@
     </div>
     </div>
 </li>
-<!--endif
+@endif
 
