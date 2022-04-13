@@ -26,6 +26,7 @@
                     <th>Valid ID</th>
                     <th>Talent Fee</th>
                     <th>Email</th>
+                    <th>Contact Number</th>
                     <th>Address</th>
                     <th>Action</th>
                 </tr>
@@ -48,6 +49,7 @@
                             @endif
                         </td>
                         <td>{{$user->email}}</td>
+                        <td>{{$user->contact}}</td>
                         <td>{{$user->address}}</td>
                         <td>
                             <!--can('view', $post)-->

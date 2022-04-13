@@ -28,10 +28,11 @@ class CreateUsersTable extends Migration
             $table->text('valid')->nullable();
             $table->text('address')->nullable();
             $table->boolean('approved')->default(false);
+            $table->string('contact');
 
             //EventStaff
             $table->string('stafftype')->nullable();
-            $table->double('fee', '6', '2')->nullable();
+            $table->string('fee')->nullable();
         });
     }
 

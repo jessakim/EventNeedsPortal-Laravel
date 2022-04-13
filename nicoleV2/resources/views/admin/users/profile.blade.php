@@ -54,6 +54,11 @@
                     @endif
 
                     <div class="form-group">
+                        <label for="contact">Contact Number</label>
+                            <input type="text" name="contact" class="form-control @error('contact') is-invalid @enderror" id="contact" value="{{$user->contact}}">
+                    </div>
+
+                    <div class="form-group">
                         <label for="address">Address</label>
                             <input type="text" name="address" class="form-control @error('address') is-invalid @enderror" id="address" value="{{$user->address}}">
 

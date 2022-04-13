@@ -19,12 +19,13 @@ class UserController extends Controller
             'name'=>['required', 'string', 'max:255'],
             'email'=>['required', 'email', 'max:255'],
             'avatar'=>['file'],
-            'stafftype'=>['required', 'string', 'max:255'],
+            //'stafftype'=>['required', 'string', 'max:255'],
             'address'=>['required', 'string', 'max:255'],
             'valid'=>['file'],
-            'usertype'=>['string']
+            'contact'=>['string']
         ]);
 
+        //dd($profile_data);
 
 
         if (request('avatar')) {

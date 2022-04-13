@@ -75,7 +75,8 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'stafftype' => $data['stafftype'] . ' ' . $data['specify'],
             'fee' => $data['fee'],
-            'usertype' => $data["username"]
+            'usertype' => $data["username"],
+            'contact' => $data['contact']
         ]);
 
 
