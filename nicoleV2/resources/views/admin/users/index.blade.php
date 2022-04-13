@@ -51,7 +51,7 @@
                                 <form action="{{route('user.approve', $user->id)}}" method="post">
                                     @csrf
                                     @method('PATCH')
-                                    @if ($user->approved == 0)
+                                    @if ($user->approved == 0 && auth()->user()->userHasRole('Admin'))
                                         <button type="submit" class="btn btn-primary">Approve</button>
                                     @endif
                                 </form>
