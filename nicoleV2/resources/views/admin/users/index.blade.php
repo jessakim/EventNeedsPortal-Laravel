@@ -22,9 +22,11 @@
                 <tr>
                     <th>Avatar</th>
                     <th>User Type</th>
-                    <th>Username</th>
                     <th>Name</th>
+                    <th>Valid ID</th>
+                    <th>Talent Fee</th>
                     <th>Email</th>
+                    <th>Address</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -36,9 +38,17 @@
                             <a href="{{route('user.profile.show', $user->id)}}"><img height="40px" src="{{$user->avatar}}" alt=""></a>
                         </td>
                         <td>{{$user->roles()->first()->name}} | {{$user->stafftype}}</td>
-                        <td>{{$user->username}}</td>
                         <td>{{$user->name}}</td>
+                        <td><img height="40px" src="{{$user->valid}}" alt=""></td>
+                        <td>
+                            @if (auth()->user()->userHasRole('Event Staff'))
+                                Not authorized
+                            @else
+                                {{$user->fee}}
+                            @endif
+                        </td>
                         <td>{{$user->email}}</td>
+                        <td>{{$user->address}}</td>
                         <td>
                             <!--can('view', $post)-->
                                 <form action="{{route('user.remove', $user->id)}}" method="post">
