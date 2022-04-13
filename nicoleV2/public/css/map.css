@@ -1,0 +1,8 @@
+#mapa {
+    height: 80%;
+}
+html, body {
+    height: 80%;
+    margin: 0;
+    padding: 0;
+}
