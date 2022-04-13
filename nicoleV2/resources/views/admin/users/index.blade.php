@@ -42,7 +42,7 @@
                         <td><img height="40px" src="{{$user->valid}}" alt=""></td>
                         <td>
                             @if (auth()->user()->userHasRole('Event Staff'))
-                                Not authorized
+                                You're not authorize
                             @else
                                 {{$user->fee}}
                             @endif
