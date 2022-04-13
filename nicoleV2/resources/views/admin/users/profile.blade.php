@@ -37,6 +37,7 @@
                                 <div class="invalid-feedback">{{$message}}</div>
                             @enderror
                     </div>
+                    @if (auth()->user()->userHasRole('Event Staff'))
                     <div class="form-group">
                         <label for="stafftype">Staff Type</label>
                             <input type="text" name="stafftype" class="form-control @error('stafftype') is-invalid @enderror" id="stafftype" value="{{$user->stafftype}}">
@@ -45,10 +46,13 @@
                                 <div class="invalid-feedback">{{$message}}</div>
                             @enderror
                     </div>
+
                     <div class="form-group">
                         <label for="fee">Talent Fee</label>
                             <input type="number" name="fee" class="form-control @error('fee') is-invalid @enderror" id="fee" value="{{$user->fee}}">
                     </div>
+                    @endif
+
                     <div class="form-group">
                         <label for="address">Address</label>
                             <input type="text" name="address" class="form-control @error('address') is-invalid @enderror" id="address" value="{{$user->address}}">
