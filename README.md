@@ -1,2 +1,2 @@
-# EventNeedsPortal-Laravel
-Online portal where you can contact people for you event needs
+# Java Point of Sales
+Point of Sales Application - Java based 
