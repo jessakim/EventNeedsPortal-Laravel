@@ -42,13 +42,16 @@
       <hr class="sidebar-divider">
 
       <div class="sidebar-heading">
-        Admin Available Settings
+        {{auth()->user()->roles()->first()->name}} Available Settings
       </div>
 
       <x-admin.sidebar.admin-sidebar-posts-links></x-admin.sidebar.admin-sidebar-posts-links>
 
 
       <x-admin.sidebar.admin-sidebar-users-links></x-admin.sidebar.admin-sidebar-users-links>
+
+
+      <x-admin.sidebar.admin-sidebar-bookings-links></x-admin.sidebar.admin-sidebar-bookings-links>
 
       <hr class="sidebar-divider">
 

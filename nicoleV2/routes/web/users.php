@@ -8,6 +8,8 @@ Route::get('/users/{users}/location', 'UserController@location')->name('user.loc
 Route::patch('/users/{user}/approve', 'UserController@approve')->name('user.approve');
 Route::get('/schedule/{users}/book', 'ScheduleController@book')->name('schedule.book');
 Route::post('/schedule/bookevent', 'ScheduleController@bookevent')->name('schedule.bookevent');
+Route::get('/schedule/{booking_type}', 'ScheduleController@index')->name('schedule.index');
+Route::patch('/schedule/{schedule}/approve}', 'ScheduleController@approve')->name('schedule.approve');
 
 //Route::middleware('role:admin')->group(function () {
     Route::get('/users/{user_type}', 'UserController@index')->name('users.index');

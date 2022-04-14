@@ -1,5 +1,8 @@
 <x-admin-master>
     @section('content')
+        @if (Session::has('scheduleCreated'))
+            <div class="alert alert-success">{{Session::get('scheduleCreated')}}</div>
+        @endif
         <h1>Book ( <b>{{$user->name}} - {{$user->stafftype}}</b>) for your Event</h1>
         <h5>Talent Fee: <b>{{$user->fee}}</b></h5>
         <hr>

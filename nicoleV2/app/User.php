@@ -82,4 +82,8 @@ class User extends Authenticatable
         }
         return asset('storage/' . $value);
     }
+
+    public function getInstance($id){
+        return User::find($id);
+    }
 }
