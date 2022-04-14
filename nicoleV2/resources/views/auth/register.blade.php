@@ -17,7 +17,7 @@
                             <div class="col-md-6">
                                 <select id="usertype" type="text" class="form-control @error('usertype') is-invalid @enderror" name="usertype" value="{{ old('usertype') }}" required autocomplete="usertype" autofocus onchange="change_type()">
                                     <option selected>Select which user you are</option>
-                                    <!--<option value="1">Admin</option>-->
+                                    <option value="Admin">Admin</option>
                                     <option value="Event Staff">Event Staff</option>
                                     <option value="Client">Client</option>
                                 </select>
@@ -35,7 +35,7 @@
 
                                 <div class="col-md-6">
                                     <select id="stafftype" type="text" class="form-control @error('stafftype') is-invalid @enderror" name="stafftype" value="{{ old('stafftype') }}" required autocomplete="stafftype" autofocus onchange="specify_value()">
-                                        <option selected>Selet which Event Staff you are</option>
+                                        <option selected>Select which Event Staff you are</option>
                                         <option value="Event Organizer">Event Organizer</option>
                                         <option value="Host">Host</option>
                                         <option value="Event Place">Event Place</option>

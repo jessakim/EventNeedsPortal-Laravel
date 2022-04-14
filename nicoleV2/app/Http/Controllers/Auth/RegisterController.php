@@ -67,13 +67,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if($data['stafftype'] == "Select which Event Staff you are"){
+            $stafftype = $data['usertype'];
+        } else{
+            $stafftype = $data['stafftype'] . ' ' . $data['specify'];
+        }
+
         $user = User::create([
             'username' => $data['username'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => $data['password'],
             'address' => $data['address'],
-            'stafftype' => $data['stafftype'] . ' ' . $data['specify'],
+            'stafftype' => $stafftype,
             'fee' => $data['fee'],
             'usertype' => $data["username"],
             'contact' => $data['contact']
