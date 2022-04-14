@@ -22,7 +22,8 @@ class UserController extends Controller
             //'stafftype'=>['required', 'string', 'max:255'],
             'address'=>['required', 'string', 'max:255'],
             'valid'=>['file'],
-            'contact'=>['string']
+            'contact'=>['string'],
+            'usertype'=>['string']
         ]);
 
         //dd($profile_data);

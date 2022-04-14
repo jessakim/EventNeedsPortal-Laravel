@@ -57,18 +57,19 @@
                                     @csrf
                                     @method('DELETE')
                                     @if (auth()->user()->userHasRole('Admin'))
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <a><button type="submit" class="btn btn-danger">Delete</button></a>
                                     @endif
                                 </form>
                                 <form action="{{route('user.approve', $user->id)}}" method="post">
                                     @csrf
                                     @method('PATCH')
                                     @if ($user->approved == 0 && auth()->user()->userHasRole('Admin'))
-                                        <button type="submit" class="btn btn-primary">Approve</button>
+                                        <a><button type="submit" class="btn btn-primary">Approve</button></a>
                                     @endif
                                 </form>
                                 @if (auth()->user()->userHasRole('Client'))
-                                        <a href="{{route('user.location', $user)}}"><button type="submit" class="btn btn-primary">Map Location</button></a>
+                                        <a href=""><button type="submit" class="btn btn-info">Book Appointment</button></a>
+                                        <a href="{{route('user.location', $user)}}"><button type="submit" class="btn btn-secondary">Map Location</button></a>
                                         <a href="{{route('messages.create', $user)}}"><button type="submit" class="btn btn-primary">Message</button></a>
                                 @endif
                             <!--endcan-->
