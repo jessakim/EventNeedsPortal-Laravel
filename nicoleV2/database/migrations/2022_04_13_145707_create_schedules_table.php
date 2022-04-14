@@ -15,7 +15,18 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+
+            /** Columns for Scheduling flow */
+            $table->integer('event_staff_id');
+
+            $table->string('booking_title');
+            $table->string('conntent');
+            $table->date('event_date');
+            $table->string('event_time');
+
+            $table->boolean('approved')->default(false);
         });
     }
 
