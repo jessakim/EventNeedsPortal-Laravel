@@ -22,7 +22,7 @@ class CreateSchedulesTable extends Migration
             $table->integer('event_staff_id');
 
             $table->string('booking_title');
-            $table->string('conntent');
+            $table->text('conntent');
             $table->date('event_date');
             $table->string('event_time');
 
