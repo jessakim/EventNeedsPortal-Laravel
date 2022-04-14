@@ -68,7 +68,7 @@
                                     @endif
                                 </form>
                                 @if (auth()->user()->userHasRole('Client'))
-                                        <a href=""><button type="submit" class="btn btn-info">Book Event</button></a>
+                                        <a href="{{route('schedule.book', $user)}}"><button type="submit" class="btn btn-info">Book Event</button></a>
                                         <a href="{{route('user.location', $user)}}"><button type="submit" class="btn btn-secondary">Map Location</button></a>
                                         <a href="{{route('messages.create', $user)}}"><button type="submit" class="btn btn-primary">Message</button></a>
                                 @endif
