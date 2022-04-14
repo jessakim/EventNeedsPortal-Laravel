@@ -8,6 +8,6 @@ class ScheduleController extends Controller
 {
     //
     public function book($id){
-        dd($id);
+        return view('admin.schedules.create');
     }
 }
