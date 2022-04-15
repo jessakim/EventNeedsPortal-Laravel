@@ -52,6 +52,10 @@ class User extends Authenticatable
         return $this->hasMany(Schedule::class);
     }
 
+    public function ratings(){
+        return $this->hasMany(Rating::class);
+    }
+
     public function permissions(){
         return $this->belongsToMany(Permission::class);
     }
