@@ -39,7 +39,7 @@
 
           @if(Auth::check())
           <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
+            <a class="nav-link" href="{{route('admin.index')}}">Dashboard</a>
           </li>
 
           @else
@@ -54,12 +54,6 @@
 
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
@@ -84,7 +78,7 @@
 
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Project of Nicole De Castro | Lalaine Torres | Jamella Velasco | Lira Mae Sumilhig</p>
+      <p class="m-0 text-center text-white">Project of Group 1 (Nicole De Castro | Lalaine Torres | Jamella Velasco | Lira Mae Sumilhig)</p>
     </div>
   </footer>
 

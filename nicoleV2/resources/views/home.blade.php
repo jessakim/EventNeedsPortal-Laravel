@@ -1,9 +1,7 @@
 <x-home-master>
 @section('content')
         <br><br>
-        <h1 class="my-4">Event Needs Portal
-          <small>Announcements</small>
-        </h1>
+        <img src="{{asset('storage/images/announcements.png')}}" width="350px" alt="">
 
         @foreach($posts as $post)
           <div class="card mb-4">
@@ -19,18 +17,15 @@
             </div>
           </div>
         @endforeach
-        <!-- Blog Post -->
 
-
-        <!-- Pagination -->
-        <ul class="pagination justify-content-center mb-4">
+        <!--<ul class="pagination justify-content-center mb-4">
           <li class="page-item">
             <a class="page-link" href="#">&larr; Older</a>
           </li>
           <li class="page-item disabled">
             <a class="page-link" href="#">Newer &rarr;</a>
           </li>
-        </ul>
+        </ul>-->
 @endsection
 </x-home-master>
 

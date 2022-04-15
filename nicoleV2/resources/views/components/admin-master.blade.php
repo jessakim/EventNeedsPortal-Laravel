@@ -128,7 +128,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Project of Nicole De Castro | Lalaine Torres | Jamella Velasco | Lira Mae Sumilhig</span>
+            <span>Project of Group 1 (Nicole De Castro | Lalaine Torres | Jamella Velasco | Lira Mae Sumilhig)</span>
           </div>
         </div>
       </footer>
