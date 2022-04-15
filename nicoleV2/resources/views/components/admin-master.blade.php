@@ -28,7 +28,7 @@
         <div class="sidebar-brand-icon">
             <img class="img-profile rounded-circle" height="45px" width="55px" src="{{auth()->user()->avatar}}">
         </div>
-        <div class="sidebar-brand-text mx-3">{{auth()->user()->username}}</div>
+        <div class="sidebar-brand-text mx-3">{{auth()->user()->username}} {{auth()->user()->roles()->first()->name}}</div>
       </a>
 
       <hr class="sidebar-divider my-0">

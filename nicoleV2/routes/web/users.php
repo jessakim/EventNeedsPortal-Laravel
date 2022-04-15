@@ -12,6 +12,7 @@ Route::get('/schedule/{booking_type}', 'ScheduleController@index')->name('schedu
 Route::patch('/schedule/{schedule}/approve}', 'ScheduleController@approve')->name('schedule.approve');
 Route::get('/users/{users}/rate', 'RatingController@rate')->name('user.rate');
 Route::post('/users/rate', 'RatingController@saverate')->name('user.saverate');
+Route::get('/users/{user_type}/ratings', 'RatingController@index')->name('user.rating');
 
 //Route::middleware('role:admin')->group(function () {
     Route::get('/users/{user_type}', 'UserController@index')->name('users.index');

@@ -28,4 +28,8 @@ class RatingController extends Controller
 
         return back();
     }
+
+    public function index(){
+
+    }
 }
