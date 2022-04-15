@@ -18,7 +18,7 @@ class CreateRatingsTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
 
-            $table->integer('rating');
+            $table->integer('rate');
             $table->text('feedback');
 
             $table->integer('event_staff_id');
