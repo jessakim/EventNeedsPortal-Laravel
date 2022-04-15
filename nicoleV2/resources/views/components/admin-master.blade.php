@@ -82,7 +82,7 @@
                 </button>
               </div>
             </div>
-          </form>
+          </form>-->
 
           <ul class="navbar-nav ml-auto">
 
@@ -115,7 +115,7 @@
 
             <x-admin.top-nav.admin-top-navbar-user-information></x-admin.top-nav.admin-top-navbar-user-information>
 
-          </ul>-->
+          </ul>
 
         </nav>
         <div class="container-fluid">

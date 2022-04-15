@@ -64,6 +64,9 @@
                             <button type="submit" class="btn btn-primary">Approve</button>
                             @endif
                         </form>
+                        @if (auth()->user()->userHasRole('Client') && $schedule->approved == 1)
+                            <a href=""><button type="submit" class="btn btn-info">Rate</button></a>
+                        @endif
                     </tr>
 
                     @endforeach
