@@ -29,7 +29,15 @@ class RatingController extends Controller
         return back();
     }
 
-    public function index(){
+    public function index($user_type){
+        if ($user_type == "view") {
+            $ratings = Rating::all();
 
+        } elseif($user_type == "eventstaff"){
+            $ratings = Rating::where('event_staff_id', auth()->user()->id)->get();
+
+        }
+
+        return view('admin.rating.index', ['ratings'=>$ratings]);
     }
 }
