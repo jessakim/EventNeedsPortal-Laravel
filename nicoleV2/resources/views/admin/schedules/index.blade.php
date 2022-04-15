@@ -65,7 +65,7 @@
                             @endif
                         </form>
                         @if (auth()->user()->userHasRole('Client') && $schedule->approved == 1)
-                            <a href=""><button type="submit" class="btn btn-info">Rate</button></a>
+                            <a href="{{route('user.rate', $schedule->event_staff_id)}}"><button type="submit" class="btn btn-info">Rate</button></a>
                         @endif
                     </tr>
 
