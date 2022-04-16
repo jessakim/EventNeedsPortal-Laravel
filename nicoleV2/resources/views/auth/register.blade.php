@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<!--<div class="container">
+
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register your initial profile here!') }}</div>
@@ -177,7 +177,90 @@
             </div>
         </div>
     </div>
+</div>-->
+
+
+<div class="container">
+    <h3>Register here!</h3><h5><b><i>weHunt</i></b> would like to know you more...</h5>
+    <hr>
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+        @csrf
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="name">Complete Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Firstname, Middlename, Lastname" name="name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="usernmae" placeholder="ex: twoJoINt$" name="username" required>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="address" name="address" placeholder="Mabatang Abucay Bataan">
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact Details</label>
+            <input type="text" class="form-control" id="contact" name="contact" placeholder="09123456781" required>
+          </div>
+        <div class="form-group">
+          <label for="usertype">User Type</label>
+          <select id="usertype" type="text" class="form-control" name="usertype" required autocomplete="usertype" autofocus onchange="change_type()">
+            <option selected>Select which user you are</option>
+            <option value="Admin">Admin</option>
+            <option value="Event Staff">Event Staff</option>
+            <option value="Client">Client</option>
+          </select>
+        </div>
+
+        <div class="forEventStaff" id="forEventStaff">
+            <div class="form-group">
+                <label for="stafftype">Type of Client Staff</label>
+                <select id="stafftype" type="text" class="form-control" name="stafftype" required autocomplete="stafftype" autofocus onchange="specify_value()">
+                    <option selected>Select which Event Staff you are</option>
+                    <option value="Event Organizer">Event Organizer</option>
+                    <option value="Host">Host</option>
+                    <option value="Event Place">Event Place</option>
+                    <option value="Foods">Foods</option>
+                    <option value="Entertainer">Entertainer</option>
+                    <option value="Light and Sounds">Light and Sounds</option>
+                    <option value="Invitation and Stationary">Invitation and Stationary</option>
+                    <option value="Video and Photography">Video and Photography</option>
+                    <option value="Decorations">Decorations</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6" id="specify">
+                  <label for="specify">Specify</label>
+                  <input type="text" class="form-control" id="specify" name="specify" placeholder="ex: DJ, Catering, etc">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="fee">Service Fee</label>
+                  <input type="text" class="form-control" id="fee" name="fee" placeholder="ex: 17,432">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="email">Email Address</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="twojoints@gmail.com" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="**********" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputZip">Confirm Password</label>
+            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="**********" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
 </div>
+
+
 
     <script>
     function change_type(){
