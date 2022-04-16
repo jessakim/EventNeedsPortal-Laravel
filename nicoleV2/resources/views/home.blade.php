@@ -1,10 +1,9 @@
 <x-home-master>
 @section('content')
         <br><br>
-        <img src="{{asset('storage/images/announcements.png')}}" width="350px" alt="">
+        <center><img src="{{asset('storage/images/announcements.png')}}" width="350px" alt=""></center>
 
         @foreach($posts as $post)
-          <div class="card mb-4">
             <img class="card-img-top" src="{{$post->post_image}}" alt="Card image cap">
             <div class="card-body">
               <h2 class="card-title">{{$post->title}}</h2>
@@ -15,7 +14,6 @@
               Posted on {{$post->created_at->diffForHumans()}}
               <a>| by {{$post->user->name}}</a>
             </div>
-          </div>
         @endforeach
 
         <!--<ul class="pagination justify-content-center mb-4">

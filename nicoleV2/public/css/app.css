@@ -70,9 +70,9 @@ body {
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #212529;
+  color: #000000;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: #bbc0c4;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -5058,7 +5058,7 @@ input[type=button].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #e4634c ;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
