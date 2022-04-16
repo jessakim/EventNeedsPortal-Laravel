@@ -96,7 +96,7 @@ class UserController extends Controller
     }
 
     public function location($user){
-        $GOOGLE_API_KEY_HERE='AIzaSyBHEUDeOlqPXICX9_p_EznaiOHq3frL8O0';
+        $GOOGLE_API_KEY_HERE='';
         $get_user = User::find($user);
         $address = $get_user->address;
         $data_location = "https://maps.google.com/maps/api/geocode/json?key=".$GOOGLE_API_KEY_HERE."&address=".str_replace(" ", "+", $address)."&sensor=false";
