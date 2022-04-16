@@ -95,8 +95,16 @@ class UserController extends Controller
         return view('admin.users.index', ['users'=>$users]);
     }
 
-    public function location(User $user){
-        return view('admin.users.location', ['user'=>$user]);
+    public function location($user){
+        $GOOGLE_API_KEY_HERE='AIzaSyBHEUDeOlqPXICX9_p_EznaiOHq3frL8O0';
+        $get_user = User::find($user);
+        $address = $get_user->address;
+        $data_location = "https://maps.google.com/maps/api/geocode/json?key=".$GOOGLE_API_KEY_HERE."&address=".str_replace(" ", "+", $address)."&sensor=false";
+        $data = file_get_contents($data_location);
+        $json =json_decode($data);
+        $lat = $json->results[0]->geometry->location->lat;
+        $lng = $json->results[0]->geometry->location->lng;
+        return view('admin.users.location', ['user'=>$user, 'lat'=>$lat, 'lng'=>$lng]);
     }
 
     public function approve(User $user){
