@@ -60,6 +60,7 @@
                 border-radius: 100%;
                 width: 100px;
                 height: 100px;
+                text-align: center;
             }
             #circle11 {
                 background: #adb5bd;
@@ -121,57 +122,93 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="admin">Admin Users</label>
-                            <div id="circle1"></div>
+                            <div id="circle1">
+                                <br>
+                                <h1 style="color:black">{{$admins}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Event Staff Users</label>
-                            <div id="circle2"></div>
+                            <div id="circle2">
+                                <br>
+                                <h1 style="color:black">{{$staffs}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Client Users</label>
-                            <div id="circle3"></div>
+                            <div id="circle3">
+                                <br>
+                                <h1 style="color:black">{{$clients}}</h1>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="admin">Event Organizers</label>
-                            <div id="circle4"></div>
+                            <div id="circle4">
+                                <br>
+                                <h1 style="color:black">{{$eorgs}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Hosts</label>
-                            <div id="circle5"></div>
+                            <div id="circle5">
+                                <br>
+                                <h1 style="color:black">{{$hosts}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Event Places</label>
-                            <div id="circle6"></div>
+                            <div id="circle6">
+                                <br>
+                                <h1 style="color:black">{{$eplaces}}</h1>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="admin">Foods</label>
-                            <div id="circle7"></div>
+                            <div id="circle7">
+                                <br>
+                                <h1 style="color:black">{{$foods}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Entertainers</label>
-                            <div id="circle8"></div>
+                            <div id="circle8">
+                                <br>
+                                <h1 style="color:black">{{$etainers}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Lights and Sounds</label>
-                            <div id="circle9"></div>
+                            <div id="circle9">
+                                <br>
+                                <h1 style="color:black">{{$lands}}</h1>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="admin">Invitation and Stationary</label>
-                            <div id="circle10"></div>
+                            <div id="circle10">
+                                <br>
+                                <h1 style="color:black">{{$iands}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Video and Photography</label>
-                            <div id="circle11"></div>
+                            <div id="circle11">
+                                <br>
+                                <h1 style="color:black">{{$vandp}}</h1>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="admin">Decorations and other stuffs</label>
-                            <div id="circle12"></div>
+                            <div id="circle12">
+                                <br>
+                                <h1 style="color:black">{{$decors}}</h1>
+                            </div>
                         </div>
                     </div>
                     </center>
