@@ -82,6 +82,7 @@
              <h1>Congratulations! You're done with the initial registration, go to your Profile and upload your Avatar and Valid ID so the Admin can validate and approve your account before you can fully use the application. Thanks!</h1>
         @endif
 
+        @if ($user->approved == 1)
         <div class="container-fluid">
 
             <!-- Page Heading -->
@@ -238,6 +239,8 @@
             </div>
 
           </div>
+        @endif
+
     @endsection
 </x-admin-master>
 
