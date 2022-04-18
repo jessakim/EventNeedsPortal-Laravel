@@ -49,7 +49,7 @@
 
                     <div class="form-group">
                         <label for="fee">Talent Fee</label>
-                            <input type="number" name="fee" class="form-control @error('fee') is-invalid @enderror" id="fee" value="{{$user->fee}}">
+                            <input type="text" name="fee" class="form-control @error('fee') is-invalid @enderror" id="fee" value="{{$user->fee}}">
                     </div>
                     @endif
 
