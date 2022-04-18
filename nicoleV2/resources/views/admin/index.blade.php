@@ -145,29 +145,32 @@
                   <!-- Card Body -->
                   <div class="card-body">
                     <center>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="admin">Admins</label>
-                            <div id="circle1">
-                                <br>
-                                <h1 style="color:black">{{$admins}}</h1>
+                    @if (auth()->user()->userHasRole('Admin'))
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="admin">Admins</label>
+                                <div id="circle1">
+                                    <br>
+                                    <h1 style="color:black">{{$admins}}</h1>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="admin">Event Suppliers</label>
+                                <div id="circle2">
+                                    <br>
+                                    <h1 style="color:black">{{$staffs}}</h1>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="admin">Clients</label>
+                                <div id="circle3">
+                                    <br>
+                                    <h1 style="color:black">{{$clients}}</h1>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label for="admin">Event Suppliers</label>
-                            <div id="circle2">
-                                <br>
-                                <h1 style="color:black">{{$staffs}}</h1>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="admin">Clients</label>
-                            <div id="circle3">
-                                <br>
-                                <h1 style="color:black">{{$clients}}</h1>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="admin">Organizers</label>
