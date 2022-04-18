@@ -218,15 +218,15 @@
                 <label for="stafftype">Type of Event Supplier</label>
                 <select id="stafftype" type="text" class="form-control" name="stafftype" required autocomplete="stafftype" autofocus onchange="specify_value()">
                     <option selected>Select which Event Supplier you are</option>
-                    <option value="Event Organizer">Organizer</option>
+                    <option value="Organizer">Organizer</option>
                     <option value="Host">Host</option>
-                    <option value="Event Place">Venue</option>
-                    <option value="Foods">Foods and Beverages</option>
+                    <option value="Venue">Venue</option>
+                    <option value="Foods and Beverages">Foods and Beverages</option>
                     <option value="Entertainer">Entertainer</option>
-                    <option value="Light and Sounds">Lights and Sounds</option>
-                    <option value="Invitation and Stationary">Invitations and Stationary</option>
-                    <option value="Video and Photography">Photographers and Artists</option>
-                    <option value="Decorations">Equiments and Decorations</option>
+                    <option value="Lights and Sounds">Lights and Sounds</option>
+                    <option value="Invitations and Stationary">Invitations and Stationary</option>
+                    <option value="Photographers and Artists">Photographers and Artists</option>
+                    <option value="Equipments and Decorations">Equipments and Decorations</option>
                 </select>
             </div>
 
