@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Post;
+use App\Schedule;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -20,7 +22,9 @@ class AdminController extends Controller
         $iands = User::where('stafftype', 'LIKE', '%'. 'Invitations and Stationary' .'%')->where('approved', '1')->get()->count();
         $vandp = User::where('stafftype', 'LIKE', '%'. 'Photographers and Artists' .'%')->where('approved', '1')->get()->count();
         $decors = User::where('stafftype', 'LIKE', '%'. 'Equipments and Decorations' .'%')->where('approved', '1')->get()->count();
-
+        $posts = Post::all()->count();
+        $approvedschedules = Schedule::where('approved', 1)->get()->count();
+        $unapprovedschedules = Schedule::where('approved', 0)->get()->count();
 
         return view('admin.index', ['user'=>auth()->user(), 'admins'=>$admins,
                                                             'clients'=>$clients,
@@ -33,6 +37,9 @@ class AdminController extends Controller
                                                             'lands'=>$lands,
                                                             'iands'=>$iands,
                                                             'vandp'=>$vandp,
-                                                            'decors'=>$decors]);
+                                                            'decors'=>$decors,
+                                                            'posts'=>$posts,
+                                                            'approvedschedules'=>$approvedschedules,
+                                                            'unapprovedschedules'=>$unapprovedschedules]);
     }
 }

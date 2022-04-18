@@ -1,6 +1,24 @@
 <x-admin-master>
     @section('content')
         <style>
+            #circleAnnouncement {
+                background: #dc3545;
+                border-radius: 10%;
+                width: 300px;
+                height: 300px;
+            }
+            #circleEvents1 {
+                background: #198754;
+                border-radius: 10%;
+                width: 200px;
+                height: 200px;
+            }
+            #circleEvents2 {
+                background: #20c997;
+                border-radius: 10%;
+                width: 200px;
+                height: 200px;
+            }
             #circle1 {
                 background: #0d6efd;
                 border-radius: 100%;
@@ -100,13 +118,20 @@
                   </div>
                   <!-- Card Body -->
                   <div class="card-body">
-                    <div class="chart-pie">
-                      <div id="circle">
-
-                      </div>
-                    </div>
+                    <center>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <center>
+                                    <div id="circleAnnouncement">
+                                        <br><br><br><br>
+                                        <h1 style="color:black; font-size:100px;">{{$posts}}</h1>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </center>
                     <hr>
-                    Styling for the donut chart can be found in the <code>/js/demo/chart-pie-demo.js</code> file.
+                    Number of Announcements by Admins.
                   </div>
                 </div>
               </div>
@@ -122,21 +147,21 @@
                     <center>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="admin">Admin Users</label>
+                            <label for="admin">Admins</label>
                             <div id="circle1">
                                 <br>
                                 <h1 style="color:black">{{$admins}}</h1>
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Event Supplier Users</label>
+                            <label for="admin">Event Suppliers</label>
                             <div id="circle2">
                                 <br>
                                 <h1 style="color:black">{{$staffs}}</h1>
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Client Users</label>
+                            <label for="admin">Clients</label>
                             <div id="circle3">
                                 <br>
                                 <h1 style="color:black">{{$clients}}</h1>
@@ -175,14 +200,14 @@
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Entertainers</label>
+                            <label for="admin">Entertainers for Events</label>
                             <div id="circle8">
                                 <br>
                                 <h1 style="color:black">{{$etainers}}</h1>
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Lights and Sounds</label>
+                            <label for="admin">Lights and Sounds Users</label>
                             <div id="circle9">
                                 <br>
                                 <h1 style="color:black">{{$lands}}</h1>
@@ -227,11 +252,27 @@
                   </div>
                   <!-- Card Body -->
                   <div class="card-body">
-                    <div class="chart-pie">
-                      <canvas id="myPieChart"></canvas>
-                    </div>
+                    <center>
+                        <div class="form-row">
+
+                                <div class="form-group col-md-4">
+                                <label for="admin">Approved Events</label>
+                                <div id="circleEvents1">
+                                    <br><br>
+                                    <h1 style="color:black; font-size:100px;">{{$approvedschedules}}</h1>
+                                </div>
+                                </div>
+                                <div class="form-group col-md-8">
+                                <label for="admin">Events needs Approval</label>
+                                <div id="circleEvents2">
+                                    <br><br>
+                                    <h1 style="color:black; font-size:100px;">{{$unapprovedschedules}}</h1>
+                                </div>
+                                </div>
+                        </div>
+                    </center>
                     <hr>
-                    Styling for the donut chart can be found in the <code>/js/demo/chart-pie-demo.js</code> file.
+                    Number of Scheduled Events, Approved and Unapproved Events.
                   </div>
                 </div>
               </div>
