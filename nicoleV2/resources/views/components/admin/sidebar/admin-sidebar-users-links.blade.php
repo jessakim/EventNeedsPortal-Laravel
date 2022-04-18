@@ -13,16 +13,16 @@
         <a class="collapse-item" href="{{route('users.index', "admins")}}">All Admin Users</a>
         <a class="collapse-item" href="{{route('users.index', "clients")}}">All Client Users</a>
         @endif
-        <a class="collapse-item" href="{{route('users.index', "staffs")}}">All Event Staff Users</a>
-        <a class="collapse-item" href="{{route('users.index', "eorgs")}}">Event Organizer Users</a>
+        <a class="collapse-item" href="{{route('users.index', "staffs")}}">All Event Supplier Users</a>
+        <a class="collapse-item" href="{{route('users.index', "eorgs")}}">Organizer Users</a>
         <a class="collapse-item" href="{{route('users.index', "hosts")}}">Host Users</a>
-        <a class="collapse-item" href="{{route('users.index', "eplace")}}">Event Place Users</a>
-        <a class="collapse-item" href="{{route('users.index', "foods")}}">Food Users</a>
+        <a class="collapse-item" href="{{route('users.index', "eplace")}}">Venue Users</a>
+        <a class="collapse-item" href="{{route('users.index', "foods")}}">Foods && Bevarages Users</a>
         <a class="collapse-item" href="{{route('users.index', "entertainers")}}">Entertainer Users</a>
-        <a class="collapse-item" href="{{route('users.index', "lands")}}">Light && Sounds Users</a>
+        <a class="collapse-item" href="{{route('users.index', "lands")}}">Lights && Sounds Users</a>
         <a class="collapse-item" href="{{route('users.index', "iands")}}">Inv. && Stationary Users</a>
-        <a class="collapse-item" href="{{route('users.index', "vandp")}}">Vids && Photos Users</a>
-        <a class="collapse-item" href="{{route('users.index', "decors")}}">Decorations Users</a>
+        <a class="collapse-item" href="{{route('users.index', "vandp")}}">Photograpers && Artists Users</a>
+        <a class="collapse-item" href="{{route('users.index', "decors")}}">Equipments && Decorations Users</a>
     </div>
     </div>
 </li>

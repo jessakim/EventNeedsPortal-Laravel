@@ -16,14 +16,14 @@
                 <tr>
                     @if (auth()->user()->userHasRole('Admin'))
                         <th>Rated By</th>
-                        <th>Event Staff</th>
+                        <th>Event Supplier</th>
                         <th>Event Category</th>
                     @endif
-                    @if (auth()->user()->userHasRole('Event Staff'))
+                    @if (auth()->user()->userHasRole('Event Supplier'))
                         <th>Rate By</th>
                     @endif
                     @if (auth()->user()->userHasRole('Client'))
-                        <th>Event Staff</th>
+                        <th>Event Supplier</th>
                         <th>Staff Type</th>
                     @endif
                     <th>Feedback</th>
@@ -43,7 +43,7 @@
                             <td>{{$staff_name->name}}</td>
                             <td>{{$staff_name->stafftype}}</td>
                         @endif
-                        @if (auth()->user()->userHasRole('Event Staff'))
+                        @if (auth()->user()->userHasRole('Event Supplier'))
                             <td>{{$client_name->name}}</td>
                         @endif
                         @if (auth()->user()->userHasRole('Client'))

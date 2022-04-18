@@ -33,7 +33,7 @@ class RatingController extends Controller
         if ($user_type == "view") {
             $ratings = Rating::all();
 
-        } elseif($user_type == "eventstaff"){
+        } elseif($user_type == "eventsupplier"){
             $ratings = Rating::where('event_staff_id', auth()->user()->id)->get();
 
         }

@@ -67,7 +67,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if($data['stafftype'] == "Select which Event Staff you are"){
+        if($data['stafftype'] == "Select which Event Supplier you are"){
             $stafftype = $data['usertype'];
         } else{
             $stafftype = $data['stafftype'] . ' ' . $data['specify'];

@@ -42,7 +42,7 @@
                         <td>{{$user->name}}</td>
                         <td><img height="40px" src="{{$user->valid}}" alt=""></td>
                         <td>
-                            @if (auth()->user()->userHasRole('Event Staff'))
+                            @if (auth()->user()->userHasRole('Event Supplier'))
                                 You're not allowed to see this
                             @else
                                 {{$user->fee}}

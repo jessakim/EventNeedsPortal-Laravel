@@ -5,7 +5,7 @@
         <span>
             @if (auth()->user()->userHasRole('Admin'))
                 View All Event Bookings
-            @elseif (auth()->user()->userHasRole('Event Staff'))
+            @elseif (auth()->user()->userHasRole('Event Supplier'))
                 My Appointments
             @elseif (auth()->user()->userHasRole('Client'))
                 My Event Bookings
@@ -19,7 +19,7 @@
             @if (auth()->user()->userHasRole('Admin'))
                 <a class="collapse-item" href="{{route('schedule.index', 'approved')}}">Approved Bookings</a>
                 <a class="collapse-item" href="{{route('schedule.index', 'unapproved')}}">Unapproved Bookings</a>
-            @elseif (auth()->user()->userHasRole('Event Staff'))
+            @elseif (auth()->user()->userHasRole('Event Supplier'))
                 <a class="collapse-item" href="{{route('schedule.index', 'esapproved')}}">My Approved Bookings</a>
                 <a class="collapse-item" href="{{route('schedule.index', 'esunapproved')}}">Bookings needs to review</a>
             @elseif (auth()->user()->userHasRole('Client'))

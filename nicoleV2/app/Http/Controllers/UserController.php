@@ -71,25 +71,25 @@ class UserController extends Controller
         } elseif ($user_type == "clients") {
             $users = User::where('usertype', 'Client')->get();
         } elseif ($user_type == "staffs") {
-            $users = User::where('usertype', 'Event Staff')->where('approved', '1')->get();
+            $users = User::where('usertype', 'Event Supplier')->where('approved', '1')->get();
         }  elseif ($user_type == "eorgs") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Event Organizer' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Organizer' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "hosts") {
             $users = User::where('stafftype', 'LIKE', '%'. 'Host' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "eplace") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Event Place' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Venue' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "foods") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Foods' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Foods and  Beverages' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "entertainers") {
             $users = User::where('stafftype', 'LIKE', '%'. 'Entertainer' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "lands") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Light and Sounds' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Lights and Sounds' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "iands") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Invitation and Stationary' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Invitations and Stationary' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "vandp") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Video and Photography' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Photographers and Artists' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "decors") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Decorations' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Equipments  and Decorations' .'%')->where('approved', '1')->get();
         }
 
         return view('admin.users.index', ['users'=>$users]);

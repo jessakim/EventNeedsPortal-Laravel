@@ -208,25 +208,25 @@
           <select id="usertype" type="text" class="form-control" name="usertype" required autocomplete="usertype" autofocus onchange="change_type()">
             <option selected>Select which user you are</option>
             <option value="Admin">Admin</option>
-            <option value="Event Staff">Event Staff</option>
+            <option value="Event Supplier">Event Supplier</option>
             <option value="Client">Client</option>
           </select>
         </div>
 
-        <div class="forEventStaff" id="forEventStaff">
+        <div class="forEventSupplier" id="forEventSupplier">
             <div class="form-group">
-                <label for="stafftype">Type of Client Staff</label>
+                <label for="stafftype">Type of Event Supplier</label>
                 <select id="stafftype" type="text" class="form-control" name="stafftype" required autocomplete="stafftype" autofocus onchange="specify_value()">
-                    <option selected>Select which Event Staff you are</option>
-                    <option value="Event Organizer">Event Organizer</option>
+                    <option selected>Select which Event Supplier you are</option>
+                    <option value="Event Organizer">Organizer</option>
                     <option value="Host">Host</option>
-                    <option value="Event Place">Event Place</option>
-                    <option value="Foods">Foods</option>
+                    <option value="Event Place">Venue</option>
+                    <option value="Foods">Foods and Beverages</option>
                     <option value="Entertainer">Entertainer</option>
-                    <option value="Light and Sounds">Light and Sounds</option>
-                    <option value="Invitation and Stationary">Invitation and Stationary</option>
-                    <option value="Video and Photography">Video and Photography</option>
-                    <option value="Decorations">Decorations</option>
+                    <option value="Light and Sounds">Lights and Sounds</option>
+                    <option value="Invitation and Stationary">Invitations and Stationary</option>
+                    <option value="Video and Photography">Photographers and Artists</option>
+                    <option value="Decorations">Equiments and Decorations</option>
                 </select>
             </div>
 
@@ -265,10 +265,10 @@
     <script>
     function change_type(){
         var type =$("#usertype").val();
-        if (type == "Event Staff"){
-            $("#forEventStaff").show();
+        if (type == "Event Supplier"){
+            $("#forEventSupplier").show();
         } else {
-            $("#forEventStaff").hide();
+            $("#forEventSupplier").hide();
         }
 
     }

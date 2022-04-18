@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Event Staff Users</label>
+                            <label for="admin">Event Supplier Users</label>
                             <div id="circle2">
                                 <br>
                                 <h1 style="color:black">{{$staffs}}</h1>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="admin">Event Organizers</label>
+                            <label for="admin">Organizers</label>
                             <div id="circle4">
                                 <br>
                                 <h1 style="color:black">{{$eorgs}}</h1>
@@ -159,7 +159,7 @@
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Event Places</label>
+                            <label for="admin">Venues</label>
                             <div id="circle6">
                                 <br>
                                 <h1 style="color:black">{{$eplaces}}</h1>
@@ -168,7 +168,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="admin">Foods</label>
+                            <label for="admin">Foods and Beverages</label>
                             <div id="circle7">
                                 <br>
                                 <h1 style="color:black">{{$foods}}</h1>
@@ -191,21 +191,21 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="admin">Invitation and Stationary</label>
+                            <label for="admin">Invitations and Stationary</label>
                             <div id="circle10">
                                 <br>
                                 <h1 style="color:black">{{$iands}}</h1>
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Video and Photography</label>
+                            <label for="admin">Photographers and Artists</label>
                             <div id="circle11">
                                 <br>
                                 <h1 style="color:black">{{$vandp}}</h1>
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="admin">Decorations and other stuffs</label>
+                            <label for="admin">Equipments and Decorations</label>
                             <div id="circle12">
                                 <br>
                                 <h1 style="color:black">{{$decors}}</h1>

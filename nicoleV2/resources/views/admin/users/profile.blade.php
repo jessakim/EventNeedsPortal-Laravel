@@ -37,7 +37,7 @@
                                 <div class="invalid-feedback">{{$message}}</div>
                             @enderror
                     </div>
-                    @if (auth()->user()->userHasRole('Event Staff'))
+                    @if (auth()->user()->userHasRole('Event Supplier'))
                     <div class="form-group">
                         <label for="stafftype">Staff Type</label>
                             <input type="text" name="stafftype" class="form-control @error('stafftype') is-invalid @enderror" id="stafftype" value="{{$user->stafftype}}">

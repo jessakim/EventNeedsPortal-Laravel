@@ -16,14 +16,14 @@
                 <tr>
                     @if (auth()->user()->userHasRole('Admin'))
                         <th>Client</th>
-                        <th>Event Staff</th>
+                        <th>Event Supplier</th>
                         <th>Event Category</th>
                     @endif
-                    @if (auth()->user()->userHasRole('Event Staff'))
+                    @if (auth()->user()->userHasRole('Event Supplier'))
                         <th>Client</th>
                     @endif
                     @if (auth()->user()->userHasRole('Client'))
-                        <th>Event Staff</th>
+                        <th>Event Supplier</th>
                         <th>Staff Type</th>
                     @endif
                     <th>Event Title</th>
@@ -46,7 +46,7 @@
                             <td>{{$staff_name->name}}</td>
                             <td>{{$staff_name->stafftype}}</td>
                         @endif
-                        @if (auth()->user()->userHasRole('Event Staff'))
+                        @if (auth()->user()->userHasRole('Event Supplier'))
                             <td>{{$client_name->name}}</td>
                         @endif
                         @if (auth()->user()->userHasRole('Client'))
@@ -60,7 +60,7 @@
                         <form action="{{route('schedule.approve', $schedule->id)}}" method="post">
                             @csrf
                             @method('PATCH')
-                            @if (auth()->user()->userHasRole('Event Staff') && $schedule->approved == 0)
+                            @if (auth()->user()->userHasRole('Event Supplier') && $schedule->approved == 0)
                             <button type="submit" class="btn btn-primary">Approve</button>
                             @endif
                         </form>
