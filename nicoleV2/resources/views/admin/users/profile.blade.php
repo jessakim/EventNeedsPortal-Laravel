@@ -105,8 +105,9 @@
                         <label for="valid">Upload your valid ID</label>
                         <input type="file" name="valid">
                     </div>
-
+                    @if (Auth::user()->id == $user->id || auth()->user()->userHasRole('Admin'))
                     <button type="submit" class="btn btn-primary">Update</button>
+                    @endif
                 </form>
             </div>
         </div>
