@@ -76,22 +76,25 @@
                                 <div class="invalid-feedback">{{$message}}</div>
                             @enderror
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control @error('username') is-invalid @enderror" id="password">
+                    @if (Auth::user()->id == $user->id || auth()->user()->userHasRole('Admin'))
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control @error('username') is-invalid @enderror" id="password">
 
-                            @error('password')
-                                <div class="invalid-feedback">{{$message}}</div>
-                            @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="password_confirmation">Confirm Password</label>
-                            <input type="password" name="password_confirmation" class="form-control @error('username') is-invalid @enderror" id="password_confirmation">
+                                @error('password')
+                                    <div class="invalid-feedback">{{$message}}</div>
+                                @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="password_confirmation">Confirm Password</label>
+                                <input type="password" name="password_confirmation" class="form-control @error('username') is-invalid @enderror" id="password_confirmation">
 
-                            @error('password')
-                                <div class="invalid-feedback">{{$message}}</div>
-                            @enderror
-                    </div>
+                                @error('password')
+                                    <div class="invalid-feedback">{{$message}}</div>
+                                @enderror
+                        </div>
+                    @endif
+
 
                     <div class="mb-4">
                         <label for="valid">Your valid ID</label>

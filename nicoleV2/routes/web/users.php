@@ -18,6 +18,6 @@ Route::get('/users/{user_type}/ratings', 'RatingController@index')->name('user.r
     Route::get('/users/{user_type}', 'UserController@index')->name('users.index');
 // /});
 
-Route::middleware(['can:view,user'])->group(function () {
+//Route::middleware(['can:view,user'])->group(function () {
     Route::get('/users/{user}/profile', 'UserController@show')->name('user.profile.show');
-});
+//});
