@@ -17,6 +17,22 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
+                @if (auth()->user()->userHasRole('Client'))
+                    <h6 class="m-0 font-weight-bold text-primary">Enter your budget range</h6>
+                    <table border="0" cellspacing="0" cellpadding="5">
+                        <tbody>
+                            <tr>
+                                <td>Minimum budget:</td>
+                                <td><input class="form-control" type="text" id="min" name="min"></td>
+                            </tr>
+                            <tr>
+                                <td>Maximum budget:</td>
+                                <td><input class="form-control" type="text" id="max" name="max"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                @endif
+
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
