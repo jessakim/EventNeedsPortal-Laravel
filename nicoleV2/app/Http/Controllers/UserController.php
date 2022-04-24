@@ -5,6 +5,7 @@ use App\User;
 use App\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Mail;
 
 class UserController extends Controller
 {
@@ -111,6 +112,19 @@ class UserController extends Controller
         $user->update(['approved'=>1]);
 
         Session::flash('userApproved', 'User approved successfully');
+
+        /**
+         * Email the $user once approved == 1
+         */
+        //dd($user->email);
+        $email = $user->email;
+        $data = array('name'=>$user->name);
+
+        Mail::send('mail', $data, function($message) use ($email){
+            $message->subject('Admin from weHunt APPROVED your account');
+            $message->from('wehunt.group1@gmail.com', 'weHunt');
+            $message->to($email);
+        });
 
         return back();
     }
