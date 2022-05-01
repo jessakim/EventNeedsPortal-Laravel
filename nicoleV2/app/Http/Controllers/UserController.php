@@ -80,7 +80,7 @@ class UserController extends Controller
         }  elseif ($user_type == "eplace") {
             $users = User::where('stafftype', 'LIKE', '%'. 'Venue' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "foods") {
-            $users = User::where('stafftype', 'LIKE', '%'. 'Foods and  Beverages' .'%')->where('approved', '1')->get();
+            $users = User::where('stafftype', 'LIKE', '%'. 'Foods and Beverages' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "entertainers") {
             $users = User::where('stafftype', 'LIKE', '%'. 'Entertainer' .'%')->where('approved', '1')->get();
         }  elseif ($user_type == "lands") {
@@ -97,7 +97,7 @@ class UserController extends Controller
     }
 
     public function location($user){
-        $GOOGLE_API_KEY_HERE='';
+        $GOOGLE_API_KEY_HERE='AIzaSyBHEUDeOlqPXICX9_p_EznaiOHq3frL8O0';
         $get_user = User::find($user);
         $address = $get_user->address;
         $data_location = "https://maps.google.com/maps/api/geocode/json?key=".$GOOGLE_API_KEY_HERE."&address=".str_replace(" ", "+", $address)."&sensor=false";
